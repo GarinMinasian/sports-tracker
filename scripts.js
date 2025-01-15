@@ -14,7 +14,6 @@ form.addEventListener('submit', (e) => {
   const input = activityInput.value.trim();
   if (!input) return;
 
-  // Ensure the input has three parts: type, duration, calories
   const parts = input.split(',').map(item => item.trim());
   
   if (parts.length !== 3) {
@@ -24,7 +23,6 @@ form.addEventListener('submit', (e) => {
 
   const [type, duration, calories] = parts;
 
-  // Ensure the calorie value is a number
   const caloriesNumber = parseInt(calories);
 
   if (isNaN(caloriesNumber)) {
